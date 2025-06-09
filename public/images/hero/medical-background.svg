@@ -1,0 +1,46 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0E0120;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0E1624;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Overlay pattern -->
+  <rect width="1920" height="1080" fill="url(#accent-gradient)"/>
+  
+  <!-- Abstract medical elements -->
+  <circle cx="1600" cy="200" r="150" fill="#22c55e" opacity="0.05"/>
+  <circle cx="300" cy="800" r="200" fill="#16a34a" opacity="0.03"/>
+  <circle cx="1400" cy="900" r="100" fill="#22c55e" opacity="0.08"/>
+  
+  <!-- Medical cross pattern -->
+  <g opacity="0.02">
+    <path d="M800 100L800 300M700 200L900 200" stroke="#22c55e" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1200 400L1200 600M1100 500L1300 500" stroke="#16a34a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M400 300L400 500M300 400L500 400" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- DNA helix pattern -->
+  <g opacity="0.03">
+    <path d="M100 100C200 200 300 100 400 200C500 300 600 200 700 300" stroke="#22c55e" stroke-width="3" fill="none"/>
+    <path d="M1300 700C1400 600 1500 700 1600 600C1700 500 1800 600 1900 500" stroke="#16a34a" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#22c55e" stroke-width="0.5" opacity="0.02"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+</svg>

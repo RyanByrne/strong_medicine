@@ -1,0 +1,16 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="url(#gradient2)"/>
+  <defs>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+  </defs>
+  <!-- Professional man silhouette -->
+  <circle cx="200" cy="160" r="60" fill="#1e40af" opacity="0.8"/>
+  <path d="M200 220 Q160 240 140 300 Q160 320 200 320 Q240 320 260 300 Q240 240 200 220 Z" fill="#1e40af" opacity="0.8"/>
+  <!-- Tech professional styling -->
+  <rect x="180" y="140" width="40" height="4" rx="2" fill="#1d4ed8" opacity="0.6"/>
+  <text x="200" y="360" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Michael R.</text>
+  <text x="200" y="380" text-anchor="middle" fill="#1d4ed8" font-family="Arial, sans-serif" font-size="12">Software Engineer</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#programGradient)"/>
+  <defs>
+    <linearGradient id="programGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#dcfce7"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 3-Month Timeline -->
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#22c55e" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Month markers -->
+  <circle cx="200" cy="300" r="20" fill="#22c55e"/>
+  <text x="200" y="340" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Month 1</text>
+  <text x="200" y="360" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="12">Assessment</text>
+  
+  <circle cx="400" cy="300" r="20" fill="#16a34a"/>
+  <text x="400" y="340" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Month 2</text>
+  <text x="400" y="360" text-anchor="middle" fill="#15803d" font-family="Arial, sans-serif" font-size="12">Implementation</text>
+  
+  <circle cx="600" cy="300" r="20" fill="#15803d"/>
+  <text x="600" y="340" text-anchor="middle" fill="#15803d" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Month 3</text>
+  <text x="600" y="360" text-anchor="middle" fill="#166534" font-family="Arial, sans-serif" font-size="12">Optimization</text>
+  
+  <!-- Title -->
+  <text x="400" y="100" text-anchor="middle" fill="#22c55e" font-family="Arial, sans-serif" font-size="48" font-weight="bold">3-Month Reset</text>
+  <text x="400" y="140" text-anchor="middle" fill="#16a34a" font-family="Arial, sans-serif" font-size="24">Complete Health Transformation</text>
+  
+  <!-- Health icons -->
+  <g transform="translate(150, 150)">
+    <circle cx="0" cy="0" r="30" fill="#22c55e" opacity="0.2"/>
+    <path d="M-15 0L15 0M0 -15L0 15" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <g transform="translate(400, 150)">
+    <circle cx="0" cy="0" r="30" fill="#16a34a" opacity="0.2"/>
+    <path d="M-10 -5L0 5L10 -5" stroke="#16a34a" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <g transform="translate(650, 150)">
+    <circle cx="0" cy="0" r="30" fill="#15803d" opacity="0.2"/>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#15803d" stroke-width="3"/>
+    <path d="M-5 0L0 5L5 -5" stroke="#15803d" stroke-width="2" fill="none"/>
+  </g>
+</svg>

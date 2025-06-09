@@ -1,0 +1,10 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="80" fill="#f8fafc" rx="8"/>
+  <rect x="10" y="20" width="180" height="40" fill="#e2e8f0" rx="4"/>
+  <circle cx="40" cy="40" r="12" fill="#1e40af" opacity="0.3"/>
+  <path d="M40 32L40 48M32 40L48 40" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+  <rect x="65" y="32" width="50" height="4" fill="#1e40af" rx="2"/>
+  <rect x="65" y="40" width="70" height="3" fill="#3730a3" rx="1.5"/>
+  <rect x="65" y="46" width="40" height="3" fill="#3730a3" rx="1.5"/>
+  <text x="100" y="70" text-anchor="middle" fill="#1e40af" font-family="Arial, sans-serif" font-size="8">American Board Internal Medicine</text>
+</svg>
