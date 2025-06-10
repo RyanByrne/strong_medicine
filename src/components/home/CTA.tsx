@@ -25,20 +25,25 @@ export default function CTA() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+            <a
+              href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-lg px-10 py-4 group bg-gradient-to-r from-accent to-emerald-500 hover:from-accent/90 hover:to-emerald-600 border-0"
+            >
+              <svg className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+              Free Health Assessment
+            </a>
             <Link
               href="/waitlist"
-              className="btn-primary text-lg px-10 py-4 group"
+              className="btn-secondary text-lg px-10 py-4 bg-white/10 text-white border-white/20 hover:bg-white/20"
             >
-              Start Your Transformation
+              Join the Reset Program
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Link>
-            <Link
-              href="/sit-library"
-              className="btn-secondary text-lg px-10 py-4"
-            >
-              Free Discovery Call
             </Link>
           </div>
           

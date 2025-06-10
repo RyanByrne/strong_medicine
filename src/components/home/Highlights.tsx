@@ -1,6 +1,19 @@
 export default function Highlights() {
   const features = [
     {
+      title: 'AI Health Screening',
+      description: 'Get instant insights into your health concerns with our intelligent screening tool. Receive personalized recommendations and specialist referrals in minutes.',
+      icon: (
+        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+      ),
+      cta: {
+        text: 'Try Free Screening',
+        href: process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'
+      }
+    },
+    {
       title: 'Root Cause Medicine',
       description: 'We don&apos;t mask symptoms with medications. Using advanced diagnostics, we identify and address the underlying imbalances causing your health issues.',
       icon: (
@@ -24,15 +37,6 @@ export default function Highlights() {
       icon: (
         <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      ),
-    },
-    {
-      title: 'Ongoing Support',
-      description: 'You&apos;re never alone on this journey. Weekly check-ins, 24/7 messaging, and a caring team ensure you stay on track and see results.',
-      icon: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
     },
@@ -76,9 +80,22 @@ export default function Highlights() {
                 <h3 className="text-xl font-heading font-bold text-gray-900 mb-4 group-hover:text-accent transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed mb-4">
                   {feature.description}
                 </p>
+                {feature.cta && (
+                  <a
+                    href={feature.cta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm font-medium text-accent hover:text-accent/80 transition-colors group"
+                  >
+                    {feature.cta.text}
+                    <svg className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                )}
               </div>
             </div>
           ))}
