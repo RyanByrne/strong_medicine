@@ -13,7 +13,6 @@ export default function Header() {
   const navigation = [
     { name: 'About', href: '/about' },
     { name: 'Programs', href: '/programs' },
-    { name: 'Health Screening', href: process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002', external: true },
     { name: 'SIT Library', href: '/sit-library' },
     { name: 'Blog', href: '/blog' },
   ]
@@ -85,12 +84,14 @@ export default function Header() {
                 </Link>
               )
             ))}
-            <Link
-              href="/waitlist"
+            <a
+              href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary ml-4"
             >
-              Join the Reset
-            </Link>
+              Start Onboarding
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -148,13 +149,15 @@ export default function Header() {
                   </Link>
                 )
               ))}
-              <Link
-                href="/waitlist"
+              <a
+                href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary w-full mt-6"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Join the Reset
-              </Link>
+                Start Onboarding
+              </a>
             </div>
           </div>
         )}
