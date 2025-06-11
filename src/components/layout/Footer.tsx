@@ -10,7 +10,7 @@ export default function Footer() {
     ],
     Resources: [
       { name: 'SIT Library', href: '/sit-library' },
-      { name: 'Join Waitlist', href: '/waitlist' },
+      { name: 'Get Started', href: process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002', external: true },
     ],
     Legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -29,12 +29,14 @@ export default function Footer() {
           <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
             Join thousands who have transformed their lives through our evidence-based functional medicine approach.
           </p>
-          <Link
-            href="/waitlist"
+          <a
+            href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary text-lg px-10 py-4"
           >
-            Join the Reset
-          </Link>
+            Get Started
+          </a>
         </div>
 
         {/* Links Section */}
@@ -58,12 +60,23 @@ export default function Footer() {
               <ul className="mt-4 space-y-2">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-base text-gray-300 hover:text-accent transition-colors"
-                    >
-                      {link.name}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-base text-gray-300 hover:text-accent transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-base text-gray-300 hover:text-accent transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

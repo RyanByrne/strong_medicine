@@ -180,16 +180,18 @@ export default function ProgramsPage() {
 
                   {/* CTA Button */}
                   <div className="text-center">
-                    <Link
-                      href="/waitlist"
+                    <a
+                      href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`btn-primary w-full group-hover:scale-105 transition-transform duration-300 ${
                         program.highlighted 
                           ? 'bg-gradient-to-r from-accent to-primary-600 hover:from-accent/90 hover:to-primary-700' 
                           : ''
                       }`}
                     >
-                      Join Waitlist
-                    </Link>
+                      Get Started
+                    </a>
                     <p className="text-xs text-gray-500 mt-2">30-day money-back guarantee</p>
                   </div>
                 </div>
@@ -344,8 +346,13 @@ export default function ProgramsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <a href="/waitlist" className="btn-primary text-lg px-10 py-4">
-                Join the Waitlist
+              <a 
+                href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-lg px-10 py-4"
+              >
+                Get Started
               </a>
               <a href="/about" className="btn-secondary text-lg px-10 py-4 bg-white/10 text-white border-white/20 hover:bg-white/20">
                 Meet Our Team

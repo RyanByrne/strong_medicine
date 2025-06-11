@@ -86,16 +86,18 @@ export default function Programs() {
                   </li>
                 ))}
               </ul>
-              <Link
-                href="/waitlist"
+              <a
+                href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${
                   program.highlighted
                     ? 'bg-primary-600 text-white hover:bg-primary-700'
                     : 'bg-gray-800 text-white hover:bg-gray-900'
                 }`}
               >
-                Join Waitlist
-              </Link>
+                Get Started
+              </a>
             </div>
           ))}
         </div>

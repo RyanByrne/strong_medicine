@@ -197,9 +197,14 @@ export default async function SitLibraryPage() {
               <p className="text-lg text-gray-600 mb-2">Our meditation library is being carefully curated.</p>
               <p className="text-gray-500">Check back soon for transformative sessions!</p>
               <div className="mt-8">
-                <Link href="/waitlist" className="btn-primary">
-                  Join Waitlist for Updates
-                </Link>
+                <a 
+                  href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  Get Started
+                </a>
               </div>
             </div>
           )}
@@ -309,8 +314,13 @@ export default async function SitLibraryPage() {
               <a href="/programs" className="btn-primary text-lg px-10 py-4">
                 Explore Programs
               </a>
-              <a href="/waitlist" className="btn-secondary text-lg px-10 py-4 bg-white/10 text-white border-white/20 hover:bg-white/20">
-                Join Waitlist
+              <a 
+                href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary text-lg px-10 py-4 bg-white/10 text-white border-white/20 hover:bg-white/20"
+              >
+                Get Started
               </a>
             </div>
             
