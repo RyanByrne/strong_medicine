@@ -62,12 +62,12 @@ export default function Header() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`text-base font-medium hover:text-accent transition-all duration-200 relative group flex items-center gap-1 ${
+                  className={`text-base font-medium hover:text-accent transition-all duration-200 relative group ${
                     shouldUseLightText ? 'text-white' : 'text-dark-900'
                   }`}
                 >
                   {item.name}
-                  <svg className="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3 h-3 opacity-0 group-hover:opacity-60 transition-opacity duration-200 absolute -top-1 -right-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-200 group-hover:w-full"></span>
@@ -129,11 +129,11 @@ export default function Header() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-lg font-medium text-dark-900 hover:text-accent transition-colors py-2 flex items-center gap-2"
+                    className="block text-lg font-medium text-dark-900 hover:text-accent transition-colors py-2 relative group"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                    <svg className="w-4 h-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 opacity-40 absolute top-2 -right-6 group-hover:opacity-70 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
