@@ -1,8 +1,14 @@
 import Link from 'next/link'
 import Logo from '@/components/ui/Logo'
 
+interface FooterLink {
+  name: string
+  href: string
+  external?: boolean
+}
+
 export default function Footer() {
-  const footerLinks = {
+  const footerLinks: Record<string, FooterLink[]> = {
     Company: [
       { name: 'About', href: '/about' },
       { name: 'Programs', href: '/programs' },
