@@ -10,7 +10,13 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
 
-  const navigation = [
+  interface NavItem {
+    name: string
+    href: string
+    external?: boolean
+  }
+
+  const navigation: NavItem[] = [
     { name: 'About', href: '/about' },
     { name: 'Programs', href: '/programs' },
     { name: 'SIT Library', href: '/sit-library' },
@@ -55,34 +61,16 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
-              item.external ? (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-base font-medium hover:text-accent transition-all duration-200 relative group ${
-                    shouldUseLightText ? 'text-white' : 'text-dark-900'
-                  }`}
-                >
-                  {item.name}
-                  <svg className="w-3 h-3 opacity-0 group-hover:opacity-60 transition-opacity duration-200 absolute -top-1 -right-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-200 group-hover:w-full"></span>
-                </a>
-              ) : (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`text-base font-medium hover:text-accent transition-all duration-200 relative group ${
-                    shouldUseLightText ? 'text-white' : 'text-dark-900'
-                  }`}
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-200 group-hover:w-full"></span>
-                </Link>
-              )
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-base font-medium hover:text-accent transition-all duration-200 relative group ${
+                  shouldUseLightText ? 'text-white' : 'text-dark-900'
+                }`}
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-200 group-hover:w-full"></span>
+              </Link>
             ))}
             <a
               href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
@@ -124,30 +112,14 @@ export default function Header() {
           <div className="lg:hidden">
             <div className="glass-effect rounded-2xl p-6 mt-2 space-y-4">
               {navigation.map((item) => (
-                item.external ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block text-lg font-medium text-dark-900 hover:text-accent transition-colors py-2 relative group"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                    <svg className="w-4 h-4 opacity-40 absolute top-2 -right-6 group-hover:opacity-70 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block text-lg font-medium text-dark-900 hover:text-accent transition-colors py-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block text-lg font-medium text-dark-900 hover:text-accent transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
               ))}
               <a
                 href={process.env.NEXT_PUBLIC_CHAT_TOOL_URL || 'http://localhost:3002'}
